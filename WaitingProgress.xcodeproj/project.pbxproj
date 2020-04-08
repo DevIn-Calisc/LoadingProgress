@@ -10,6 +10,13 @@
 		1195CA1D243D5B1F0075914C /* WaitingProgress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1195CA13243D5B1E0075914C /* WaitingProgress.framework */; };
 		1195CA22243D5B1F0075914C /* WaitingProgressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1195CA21243D5B1F0075914C /* WaitingProgressTests.swift */; };
 		1195CA24243D5B1F0075914C /* WaitingProgress.h in Headers */ = {isa = PBXBuildFile; fileRef = 1195CA16243D5B1E0075914C /* WaitingProgress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1195CA2F243D5F770075914C /* HCWaitingProgressProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1195CA2E243D5F770075914C /* HCWaitingProgressProtocol.swift */; };
+		1195CA32243D60640075914C /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1195CA31243D60640075914C /* UIColor+RGB.swift */; };
+		1195CA35243D66C20075914C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1195CA34243D66C20075914C /* Constants.swift */; };
+		1195CA38243D6AD70075914C /* WaitingProgressHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1195CA37243D6AD70075914C /* WaitingProgressHelper.swift */; };
+		1195CA3B243D76E20075914C /* WaitingProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1195CA3A243D76E20075914C /* WaitingProgress.swift */; };
+		1195CA3E243D77010075914C /* WaitingProgressConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1195CA3D243D77010075914C /* WaitingProgressConfig.swift */; };
+		1195CA40243DB5250075914C /* StatusWaitingProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1195CA3F243DB5250075914C /* StatusWaitingProgress.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +36,13 @@
 		1195CA1C243D5B1F0075914C /* WaitingProgressTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaitingProgressTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1195CA21243D5B1F0075914C /* WaitingProgressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingProgressTests.swift; sourceTree = "<group>"; };
 		1195CA23243D5B1F0075914C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1195CA2E243D5F770075914C /* HCWaitingProgressProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCWaitingProgressProtocol.swift; sourceTree = "<group>"; };
+		1195CA31243D60640075914C /* UIColor+RGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RGB.swift"; sourceTree = "<group>"; };
+		1195CA34243D66C20075914C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1195CA37243D6AD70075914C /* WaitingProgressHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingProgressHelper.swift; sourceTree = "<group>"; };
+		1195CA3A243D76E20075914C /* WaitingProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingProgress.swift; sourceTree = "<group>"; };
+		1195CA3D243D77010075914C /* WaitingProgressConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingProgressConfig.swift; sourceTree = "<group>"; };
+		1195CA3F243DB5250075914C /* StatusWaitingProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusWaitingProgress.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +85,14 @@
 		1195CA15243D5B1E0075914C /* WaitingProgress */ = {
 			isa = PBXGroup;
 			children = (
+				1195CA3C243D76E80075914C /* ProgressConfig */,
+				1195CA39243D76B00075914C /* Progress */,
+				1195CA36243D6ABD0075914C /* Helper */,
+				1195CA33243D669E0075914C /* Constants */,
+				1195CA30243D604E0075914C /* Extension */,
 				1195CA16243D5B1E0075914C /* WaitingProgress.h */,
 				1195CA17243D5B1E0075914C /* Info.plist */,
+				1195CA2E243D5F770075914C /* HCWaitingProgressProtocol.swift */,
 			);
 			path = WaitingProgress;
 			sourceTree = "<group>";
@@ -84,6 +104,47 @@
 				1195CA23243D5B1F0075914C /* Info.plist */,
 			);
 			path = WaitingProgressTests;
+			sourceTree = "<group>";
+		};
+		1195CA30243D604E0075914C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1195CA31243D60640075914C /* UIColor+RGB.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		1195CA33243D669E0075914C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				1195CA34243D66C20075914C /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		1195CA36243D6ABD0075914C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1195CA37243D6AD70075914C /* WaitingProgressHelper.swift */,
+				1195CA3F243DB5250075914C /* StatusWaitingProgress.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		1195CA39243D76B00075914C /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				1195CA3A243D76E20075914C /* WaitingProgress.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		1195CA3C243D76E80075914C /* ProgressConfig */ = {
+			isa = PBXGroup;
+			children = (
+				1195CA3D243D77010075914C /* WaitingProgressConfig.swift */,
+			);
+			path = ProgressConfig;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +209,7 @@
 				TargetAttributes = {
 					1195CA12243D5B1E0075914C = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 					};
 					1195CA1B243D5B1F0075914C = {
 						CreatedOnToolsVersion = 11.1;
@@ -195,6 +257,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1195CA2F243D5F770075914C /* HCWaitingProgressProtocol.swift in Sources */,
+				1195CA32243D60640075914C /* UIColor+RGB.swift in Sources */,
+				1195CA3E243D77010075914C /* WaitingProgressConfig.swift in Sources */,
+				1195CA40243DB5250075914C /* StatusWaitingProgress.swift in Sources */,
+				1195CA38243D6AD70075914C /* WaitingProgressHelper.swift in Sources */,
+				1195CA3B243D76E20075914C /* WaitingProgress.swift in Sources */,
+				1195CA35243D66C20075914C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +409,7 @@
 		1195CA28243D5B1F0075914C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2BKVRM6AD4;
@@ -356,6 +426,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.calisc.WaitingProgress;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +435,7 @@
 		1195CA29243D5B1F0075914C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2BKVRM6AD4;
@@ -388,6 +460,7 @@
 		1195CA2B243D5B1F0075914C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2BKVRM6AD4;
 				INFOPLIST_FILE = WaitingProgressTests/Info.plist;
@@ -406,6 +479,7 @@
 		1195CA2C243D5B1F0075914C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2BKVRM6AD4;
 				INFOPLIST_FILE = WaitingProgressTests/Info.plist;
