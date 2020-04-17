@@ -99,7 +99,7 @@ func cleanupLoader(loader: HCWaitingProgressProtocol) {
     loader.emptyView.removeFromSuperview()
     
     current_loader = nil
-    completionBlock = nil
+    current_completionBlock = nil
 }
 
 
@@ -164,7 +164,7 @@ func presentLoader(loader: HCWaitingProgressProtocol, onView view: UIView?, comp
         }
         
         CATransaction.begin()
-        CATransaction.setCompletionBlock(completionBlock)
+        CATransaction.setCompletionBlock(current_completionBlock)
         
         let alphaAnimation = CABasicAnimation(keyPath: "opacity")
         alphaAnimation.timingFunction = CAMediaTimingFunction(name: .easeOut)

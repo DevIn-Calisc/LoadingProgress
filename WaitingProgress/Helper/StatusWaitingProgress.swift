@@ -52,11 +52,13 @@ class LoaderProgress: HCWaitingProgressProtocol {
         backgroundFullView = UIView()
         backgroundFullView.backgroundColor = UIColor(cgColor: WaitingProgressConfig.backgroundViewColor)
         
+        // must override type of loader
+        loaderType = .infinite
+        
         // Register a notification
         NotificationCenter.default.addObserver(self, selector: #selector(orientationChanged(notification:)), name: UIDevice.orientationDidChangeNotification, object: nil)
         
-        // must override type of loader
-        loaderType = .infinite
+        
     }
     
     @objc func orientationChanged(notification: Notification) {
@@ -214,6 +216,14 @@ final class ProgressLoader: LoaderProgress {
         }
     }
     
+    func cancelWithFailAnimation(failAnim: Bool, completionBlock: (() -> Void)? = nil) {
+        if failAnim {
+            current_completionBlock = completionBlock
+            failed = true
+        } else {
+            hideLoader(loader: current_loader, withCompletionBlock: completionBlock)
+        }
+    }
     func completed() {
         let transform = CATransform3DMakeScale(0.01, 0.01, 1)
         
